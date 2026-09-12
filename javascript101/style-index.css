@@ -1,0 +1,36 @@
+* {
+    font-family: sans-serif;
+}
+
+h1 {
+    color: blue;
+    font-size: 28px;
+    text-align: center;
+    margin: 20px;
+}
+
+.module {
+    color: teal;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.program {
+    color: blueviolet;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.gotchas {
+    color: brown;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#home-list {
+    padding-left: 24px;
+}
+
+#home-list a {
+    color: inherit;
+}
