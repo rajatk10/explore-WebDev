@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lottery</title>
+    <!-- Link to the styles.css file -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Lottery</h1>
+    <form id="lottery-form">
+        <label for="number">Enter a number (1-100):</label>
+        <input type="number" id="number" name="number" min="1" max="100">
+        <button type="submit">Submit</button>
+    </form>
+    <div id="result-popup"class="result-container">
+        <p id="result"></p>
+    </div>
+    <!-- Link to the validate-number.js file -->
+    <script src="check-lottery.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #222;
+    background: #f4f4f4;
+}
+
+h1 {
+    margin: 0 0 24px;
+    font-size: 2rem;
+}
+
+#lottery-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 360px;
+    padding: 24px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+#lottery-form label {
+    font-size: 1.1rem;
+}
+
+#number {
+    padding: 12px;
+    font-size: 1.25rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#lottery-form button {
+    padding: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.is-hidden {
+    display: none;
+}
+
+/* Full-screen dim + centred card */
+.popup {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 10;
+}
+
+.popup.is-hidden {
+    display: none;
+}
+
+#result {
+    margin: 0;
+    min-width: 280px;
+    max-width: 90%;
+    padding: 28px 36px;
+    font-size: 1.75rem;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    line-height: 1.4;
+}
+
+.won {
+    color: #1b5e20;
+    background-color: #c8e6c9;
+}
+
+.lost {
+    color: #b71c1c;
+    background-color: #ffcdd2;
+}
