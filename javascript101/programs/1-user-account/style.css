@@ -1,0 +1,61 @@
+/* Tag: whole page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 24px;
+    color: #222;
+}
+
+h2 {
+    margin-bottom: 16px;
+}
+
+/* ID: stack label, input, label, input... */
+#personal-details-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 320px;
+    margin-bottom: 24px;
+}
+
+#personal-details-form input {
+    padding: 8px;
+    font-size: 16px;
+}
+
+#personal-details-form button {
+    margin-top: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+/*Mark field as hidden */
+.is-hidden {
+    display: none;
+}
+/* Applied when status is true */
+.is-valid {
+    color: #2e7d32;            /* Green text */
+    background-color: #e8f5e9; /* Light green background */
+}
+
+/* Applied when status is false */
+.is-invalid {
+    color: #c62828;            /* Red text */
+    background-color: #ffebee; /* Light red background */
+}
+
+
+/* Shared look for all status lines (class — add to HTML, see below) */
+.status-line {
+    margin: 4px 0;
+    max-width: 320px;
+}
+
+#all-details-status,
+#first-name-status,
+#last-name-status,
+#email-status,
+#phone-status {
+    font-weight: bold;
+}
