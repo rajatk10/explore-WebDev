@@ -1,0 +1,36 @@
+#heading2 {
+    color: blueviolet;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    background-color: beige;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    border: 1px solid blueviolet;
+}
+
+.bom-section {
+    color: blue;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+.bom-section ul {
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.button {
+    background-color: burlywood;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-left: 10px;
+}
