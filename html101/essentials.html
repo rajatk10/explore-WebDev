@@ -1,0 +1,126 @@
+<!doctype html>
+<!-- This page is a more refined version and structured of essentials-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A practical introduction to essential HTML concepts.">
+    <title>HTML Learning Essentials</title>
+</head>
+<body>
+    <header>
+        <h1>HTML Learning Essentials</h1>
+        <p>HTML describes the meaning and structure of a web page. CSS controls appearance, and JavaScript adds behaviour.</p>
+        <nav aria-label="Page sections">
+            <a href="#text">Text</a> |
+            <a href="#content">Content</a> |
+            <a href="#forms">Forms</a> |
+            <a href="#checklist">Checklist</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="text">
+            <h2>1. Text, meaning, and attributes</h2>
+            <p>Use headings in order: one <code>&lt;h1&gt;</code> for the page topic, then <code>&lt;h2&gt;</code> and <code>&lt;h3&gt;</code> for sections.</p>
+            <p><strong>Strong</strong> means important text. <em>Emphasis</em> changes the meaning or stress of text. Use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> only when their visual distinction has no meaning.</p>
+            <p>An <strong>attribute</strong> adds information to an element. For example, this <a href="https://developer.mozilla.org/" target="_blank" rel="noreferrer">external link</a> has an <code>href</code> destination.</p>
+            <p>Special characters can be written with entities: &amp;copy; (copyright), &amp;amp; (ampersand), and &amp;lt; (less-than sign).</p>
+        </section>
+
+        <section id="content">
+            <h2>2. Common content elements</h2>
+
+            <h3>Lists</h3>
+            <p>Put every list item inside <code>&lt;li&gt;</code>. Use an unordered list when order does not matter:</p>
+            <ul>
+                <li>Milk</li>
+                <li>Bread</li>
+                <li>Fruit</li>
+            </ul>
+            <p>Use an ordered list when the sequence matters:</p>
+            <ol>
+                <li>Write the HTML structure.</li>
+                <li>Add meaningful content.</li>
+                <li>Check it in a browser.</li>
+            </ol>
+
+            <h3>Images</h3>
+            <p>Images need helpful alternative text. If an image is purely decorative, use an empty <code>alt=""</code>.</p>
+            <figure>
+                <img src="https://placehold.co/480x180" alt="Placeholder banner used as an image example" width="480" height="180">
+                <figcaption>An image paired with a caption using <code>&lt;figure&gt;</code>.</figcaption>
+            </figure>
+
+            <h3>Tables</h3>
+            <p>Use tables for data, not page layout. A caption and table headings make data easier to understand.</p>
+            <table>
+                <caption>Example shopping list</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Milk</td>
+                        <td>$1.00</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>Bread</td>
+                        <td>$2.00</td>
+                        <td>2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="forms">
+            <h2>3. Forms and user input</h2>
+            <p>Every input needs a visible <code>&lt;label&gt;</code>. Matching its <code>for</code> value to the input <code>id</code> helps people using assistive technology.</p>
+            <form action="#" method="post">
+                <p>
+                    <label for="name">Name</label><br>
+                    <input id="name" name="name" type="text" autocomplete="name" required>
+                </p>
+                <p>
+                    <label for="email">Email</label><br>
+                    <input id="email" name="email" type="email" autocomplete="email" required>
+                </p>
+                <p>
+                    <label for="topic">Favourite topic</label><br>
+                    <select id="topic" name="topic">
+                        <option>HTML structure</option>
+                        <option>Accessibility</option>
+                        <option>Forms</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="message">Question</label><br>
+                    <textarea id="message" name="message" rows="4" cols="35"></textarea>
+                </p>
+                <button type="submit">Send practice form</button>
+            </form>
+        </section>
+
+        <section id="checklist">
+            <h2>4. Essential habits</h2>
+            <ul>
+                <li>Start every page with <code>&lt;!doctype html&gt;</code> and set the document language with <code>lang</code>.</li>
+                <li>Keep page information in <code>&lt;head&gt;</code>; put visible content in <code>&lt;body&gt;</code>.</li>
+                <li>Choose elements for their meaning: <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>, and <code>&lt;nav&gt;</code>.</li>
+                <li>Use CSS for colours, fonts, spacing, and layout—avoid deprecated tags such as <code>&lt;font&gt;</code> and <code>&lt;center&gt;</code>.</li>
+                <li>Write meaningful link text, alt text, labels, titles, and heading structure for accessibility.</li>
+                <li>Validate your markup with the <a href="https://validator.w3.org/" target="_blank" rel="noreferrer">W3C HTML Validator</a>.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>Next step:</strong> recreate one small webpage using only semantic HTML, then style it with CSS, add behavior with JavaScript in projects.</p>
+    </footer>
+</body>
+</html>
