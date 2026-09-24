@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React 101</title>
+    <script type="importmap">
+        {
+            "imports": {
+                "react": "https://esm.sh/react@latest?dev",
+                "react-dom/client": "https://esm.sh/react-dom@latest/client?dev",
+                "react/jsx-runtime": "https://esm.sh/react@latest/jsx-runtime?dev"
+            }
+        }
+    </script>
+    <!--- Add the JSX Compiler Babel-->
+    <script src="https://unpkg.com/@babel/standalone@latest/babel.min.js"></script>
+</head>
+<body>
+    <h1>React 101 - CDN ES6 Module</h1>
+        <div id="root"></div>
+        <script type="text/babel" data-type="module" data-presets="react">
+            import React from "react";
+            import {createRoot} from "react-dom/client";
+            const root = createRoot(document.getElementById("root"));
+            root.render(<h2><center>Develop. Preview. Ship. </center></h2>);
+        </script>
+        <div id="learnHomePage"></div>
+        <script type="text/babel" data-type="module" data-presets="react">
+            import React from "react";
+            import {createRoot} from "react-dom/client";
+            const learnHomePageRoot = createRoot(document.getElementById("learnHomePage"));
+            function LearnHomePage() {
+                const lessons = ["Lesson 1", "Lesson 2", "Lesson 3", "Lesson 4", "Lesson 5"];
+                return (
+                    <div style={{backgroundColor: "lightblue", padding: "20px", borderRadius: "10px"}}>
+                    <h2 color="red" fontFamily="sans-serif">Learn Home Page - This contains start of React Learning Journey</h2>
+                    <ul>
+                        {lessons.map((lesson) => (
+                            <li key={lesson}>{lesson}</li>
+                        ))}
+                    </ul>
+                </div>
+                    );
+            }
+            learnHomePageRoot.render(<LearnHomePage />);
+        </script>
+        <div id="lesson1"></div>
+        <script type="text/babel" data-type="module" data-presets="react">
+            import React from "react";
+            import {createRoot} from "react-dom/client";
+            const lesson1Root = createRoot(document.getElementById("lesson1"));
+            function Lesson1() {
+                return (
+                    <h2><center>Lesson 1 : React Components, a container for UI elements.</center></h2>
+            )};
+            lesson1Root.render(<Lesson1 />);
+        </script>
+        <div id="lesson2"></div>
+        <script type="text/babel" data-type="module" data-presets="react">
+            import React from "react";
+            import {createRoot} from "react-dom/client";
+            const lesson2Root = createRoot(document.getElementById("lesson2"));
+            function Lesson2(props) {
+                return (
+                    <div>
+                        <h2>Lesson 2 - React Component: {props.topic}</h2>
+                    </div>
+                );
+            }
+            lesson2Root.render(<Lesson2 topic="Properties"/>);
+        </script>
+        <div id="lesson3"></div>
+        <script type="text/babel" data-type="module" data-presets="react">
+            import React, {useState} from "react";
+            import {createRoot} from "react-dom/client";
+            const lesson3Root = createRoot(document.getElementById("lesson3"));
+            function Lesson3(props) {
+                const [likes, setLikes] = useState(0);
+                function handleClick() {
+                    console.log("Clicked");
+                    setLikes(likes => likes + 1);
+                }
+                return (
+                    <div>
+                    <h2>Lesson 3 - React : {props.topic}</h2>
+                    <button onClick={handleClick}>Likes ({likes})</button>
+                    </div>
+                );
+            }
+            lesson3Root.render(<Lesson3 topic="State Management"/>);
+        </script>
+</body>
+</html>
