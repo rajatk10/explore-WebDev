@@ -1,0 +1,36 @@
+h1 {
+    color: red;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+h2 {
+    color: goldenrod;
+    font-size: 18px;
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+}
+
+.button {
+    center: auto;
+    background-color: bisque;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    font-family: sans-serif;
+    color: black;
+}
